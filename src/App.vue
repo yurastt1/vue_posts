@@ -1,17 +1,38 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Listing :posts='posts' />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue';
+import Listing from './components/Listing.vue';
 
 export default {
   name: 'App',
+
   components: {
-    HelloWorld,
+    Listing,
+  },
+
+  data() {
+    return {
+      posts: [],
+    };
+  },
+
+  methods: {
+    async getPosts() {
+      const posts = await fetch('https://5f95a0992de5f50016ca20f5.mockapi.io/api/posts')
+        .then((response) => response.json());
+
+      this.posts = posts.items;
+
+      console.log(this.posts[0]);
+    },
+  },
+
+  mounted() {
+    this.getPosts();
   },
 };
 </script>
