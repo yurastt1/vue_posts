@@ -1,9 +1,15 @@
 <template>
   <div class="postList">
-    <div class="post" v-for="post in posts" :key="post.id">
-      <img class="post__image" :src="post.image">
-      <h1 class="post__title">{{ post.title }}</h1>
-      <h3>{{ post.subtitle }}</h3>
+    <div
+      class="post"
+      v-for="post in posts"
+      :key="post.id"
+    >
+      <router-link :to="{ name: 'Post', params: { id: post.id }}">
+        <img class="post__image" :src="post.image">
+        <h1 class="post__title">{{ post.title }}</h1>
+        <h3>{{ post.subtitle }}</h3>
+      </router-link>
     </div>
   </div>
 </template>
@@ -11,10 +17,6 @@
 <script>
 export default {
   props: ['posts'],
-
-  components: {
-
-  },
 };
 </script>
 
