@@ -26,8 +26,6 @@ export default {
         .then((response) => response.json());
 
       this.posts = posts.items;
-
-      console.log(this.posts[0]);
     },
   },
 
