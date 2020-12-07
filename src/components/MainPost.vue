@@ -1,9 +1,12 @@
 <template>
-  <div class="mainPost">
+  <router-link
+    class="mainPost"
+    :to="{ name: 'Post', params: { id: post.id }}"
+  >
     <img class="mainPost__image" :src="post.image">
     <h1 class="mainPost__title">{{ post.title }}</h1>
     <h3>{{ post.subtitle }}</h3>
-  </div>
+  </router-link>
 </template>
 
 <script>
