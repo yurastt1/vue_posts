@@ -37,12 +37,13 @@ export default {
 }
   .mainPost__breakline {
       height: 2px;
+      width: 640px;
       color:black;
       background-color:black;
       margin-top: 34px
   }
 
-  .mainpost__description {
+  .mainPost__description {
     width: 640px;
     margin: 0 auto;
   }
