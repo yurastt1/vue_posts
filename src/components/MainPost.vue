@@ -5,7 +5,7 @@
   >
     <img class="mainPost__image" :src="post.image">
     <h1 class="mainPost__title">{{ post.title }}</h1>
-    <h3>{{ post.subtitle }}</h3>
+    <h3 class="mainPost__subtitle">{{ post.subtitle }}</h3>
   </router-link>
 </template>
 
@@ -21,10 +21,14 @@ export default {
 
 <style lang="scss">
   .mainPost {
-    width: 640px;
-    margin: auto;
+    text-align: center;
 
     &__title {
+      margin-top: 44px;
+    }
+
+    &__subtitle {
+      margin-top: 32px;
     }
   }
 </style>

@@ -8,7 +8,6 @@
       <router-link :to="{ name: 'Post', params: { id: post.id }}">
         <img class="post__image" :src="post.image">
         <h1 class="post__title">{{ post.title }}</h1>
-        <h3>{{ post.subtitle }}</h3>
       </router-link>
     </div>
   </div>
@@ -23,20 +22,37 @@ export default {
 <style lang="scss">
   .postList {
     width: 640px;
-    margin: auto;
+    margin: 39px auto 0;
     display: flex;
     flex-wrap: wrap;
+  }
+
+  .post {
+    width: 304px;
+    margin-left: 15px;
+    margin-top: 34px;
+
+    &__image {
+      width: 304px;
+    }
 
     &__title {
+      margin-top: 20px;
+      font-size: 22px;
+      font-weight: 500;
+      line-height: 26.4px;
+      font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+
+    }
+  }
+
+  @media screen and (max-width: 650px) {
+    .postList {
+      flex-direction: column;
     }
 
     .post {
-      width: 304px;
-      margin-left: 15px;
-
-      &__image {
-        width: 304px;
-      }
+      margin: 42px auto;
     }
   }
 </style>

@@ -1,7 +1,10 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
+import VueObserveVisibility from 'vue-observe-visibility';
 import App from './App.vue';
 import router from './router/index';
+
+Vue.use(VueObserveVisibility);
 
 Vue.use(VueRouter);
 
