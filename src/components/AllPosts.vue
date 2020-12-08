@@ -42,7 +42,6 @@ export default {
       font-weight: 500;
       line-height: 26.4px;
       font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
-
     }
   }
 

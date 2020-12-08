@@ -4,7 +4,7 @@
     <hr class="listing__breakline">
     <h1 class="listing__heading">All articles</h1>
     <AllPosts :posts="postsList" />
-    <div class="am" v-observe-visibility="handleScroll">
+    <div class="scrollChecker" v-observe-visibility="handleScroll">
 
     </div>
   </div>
@@ -89,7 +89,7 @@ export default {
     }
   }
 
-  .am {
+  .scrollChecker {
     visibility: hidden;
     height: 1px;
   }
